@@ -41,6 +41,9 @@ const Country = ({ country }) => {
   }, [url])
   
 
+
+  
+
   return (
     <div>
       <h2>{country.name.common}</h2>
