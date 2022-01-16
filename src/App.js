@@ -31,15 +31,15 @@ const Weather = ({ weather, city }) => {
 
 const Country = ({ country }) => {
   const [weather, setWeather] = useState(null)
-  const REACT_APP_API_KEY = '3b53c222bcecee6c1ae5770125f8c577'
   const api_key = process.env.REACT_APP_API_KEY
   //const url = `http://api.weatherstack.com/current?access_key=${api_key}&query=${country.capital}`
-  const url = `http://api.openweathermap.org/data/2.5/weather?q=${country.capital}&appid=${REACT_APP_API_KEY}`
+  const url = `http://api.openweathermap.org/data/2.5/weather?q=${country.capital}&appid=${api_key}`
   useEffect(() => {
     axios.get(url).then(response => {
       setWeather(response.data)
     })
   }, [url])
+  
 
   return (
     <div>
