@@ -39,10 +39,6 @@ const Country = ({ country }) => {
       setWeather(response.data)
     })
   }, [url])
-  
-
-//alsldldklksd
-  
 
   return (
     <div>
